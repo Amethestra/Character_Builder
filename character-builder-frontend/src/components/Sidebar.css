@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  background: #0f0f1a;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+}
+
+.burger {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2000;
+  color: #00f0ff;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: rgba(20, 20, 30, 0.9);
+  backdrop-filter: blur(15px);
+  transition: left 0.4s ease;
+  box-shadow: 2px 0 15px rgba(0, 255, 255, 0.2);
+  padding: 2rem 1rem;
+  z-index: 1500;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  position: relative;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.menu-item:hover {
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.menu-item:hover .submenu {
+  max-height: 300px;
+}
+
+.submenu li {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.submenu li:hover {
+  opacity: 1;
+  color: #00f0ff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
